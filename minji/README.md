@@ -22,7 +22,7 @@ git **push** -u *origin* master : 로컬저장소에서 원격 저장소로 연�
 ---
 
 ## 230713
-# gitHub
+# gitHub :pushpin:
 git **remote** add origin url : 로컬 저장소에 원격 저장소 주소 추가<br>
 git **pull** (origin master) : 원격 저장소 주소 추가 이후 변경사항 업데이트 시 사용(괄호는 생략 가능)<br>
 git **clone** url : 원격 저장소 전체 복제 (이미 git init 되어있음)
