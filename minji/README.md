@@ -30,4 +30,4 @@ git **clone** url : 원격 저장소 전체 복제 (이미 git init 되어있음
 # gitIgnore
 .gitignore 파일 생성 (확장자 없음)<br>
 *이미 git 관리 받은 파일,디렉토리는 나중에 ignore에 작성해도 적용 안됌*<br>
-`https://www.toptal.com/developers/gitignore`
+[gitignore 사이트](https://www.toptal.com/developers/gitignore)
