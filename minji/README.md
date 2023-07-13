@@ -3,6 +3,7 @@
 ![이미지 보이지 않을 때 문자열](이미지 주소) : 폴더 내 이미지 사용하려면 파일 이름으로 // 예시-(img/str.jpg)<br>
 
 [나머지는 링크 참조](https://www.markdownguide.org/)<br>
+[==이모지 참고==](https://gist.github.com/rxaviers/7360908)
 
 # GitBash
 ls : 리스트(파일 목록 조회)<br>
