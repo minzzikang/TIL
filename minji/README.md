@@ -1,5 +1,5 @@
-# 0712
-## MarkDown
+## 230712
+# MarkDown
 ![이미지 보이지 않을 때 문자열](이미지 주소) : 폴더 내 이미지 사용하려면 파일 이름으로 // 예시-(img/str.jpg)<br>
 
 [나머지는 링크 참조](https://www.markdownguide.org/)<br>
@@ -21,12 +21,12 @@ git **push** -u *origin* master : 로컬저장소에서 원격 저장소로 연�
 
 ---
 
-# 0713
-## gitHub
+## 230713
+# gitHub
 git **remote** add origin url : 로컬 저장소에 원격 저장소 주소 추가<br>
 git **pull** (origin master) : 원격 저장소 주소 추가 이후 변경사항 업데이트 시 사용(괄호는 생략 가능)<br>
 git **clone** url : 원격 저장소 전체 복제 (이미 git init 되어있음)
 
-## gitIgnore
+# gitIgnore
 .gitignore 파일 생성 (확장자 없음)<br>
 *이미 git 관리 받은 파일,디렉토리는 나중에 ignore에 작성해도 적용 안됌*
