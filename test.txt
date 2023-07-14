@@ -1,3 +1,0 @@
-num = int()
-
-for i in num:
