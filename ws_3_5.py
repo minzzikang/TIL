@@ -24,6 +24,9 @@ def create_user(name, age, address):
 many_user = list(map(create_user, name, age, address))
 print(many_user)
 
+def user_lambda(user):
+    return {'name': user['name'], 'age': age['age']}
+
 user_info_list = list(
     map(lambda user : {'name': user['name'], 'age': user['age']}, many_user)
 )
@@ -33,8 +36,6 @@ print(user_info_list)
 def rental_book(info):
     n = info['age'] // 10
     book.decrease_book(n)
-    print(f'{info['name']}님이 {n}권의 책을 대여하였습니다.')
-
-map(rental_book, user_info_list)
+    print(f"{info['name']}님이 {n}권의 책을 대여하였습니다.")
 
 result = list(map(rental_book, user_info_list))
