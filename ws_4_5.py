@@ -1,4 +1,4 @@
-user_data = [
+user_user = [
     {
         'blood_group': 'AB',
         'company': 'Stone Inc',
@@ -285,9 +285,14 @@ user_data = [
 blood_types = ['A-', 'A+', 'B-', 'B+', 'O-', 'O+', 'AB-', 'AB+']
 black_list = ['Jenkins-Garcia', 'Stephens Group', 'White, Andrade and Howard', 'Warren-Stewart']
 
-def create_user(user_list):
-    pass
+def create_user(user_data):
+    user_list = {}
+    for user in user_data:
+        is_validation(user)
+    
+    return user_list
 
-def is_validation(user_list):
-    pass
+def is_validation(user):
+    if user['blood_group'] in blood_types and user['company'] not in black_list and (30 >= len(user['name']) >= 2):
+
 
