@@ -286,7 +286,7 @@ blood_types = ['A-', 'A+', 'B-', 'B+', 'O-', 'O+', 'AB-', 'AB+']
 black_list = ['Jenkins-Garcia', 'Stephens Group', 'White, Andrade and Howard', 'Warren-Stewart']
 
 def create_user(user_data):
-    user_list = {}
+    user_list = []
     for user in user_data:
         is_validation(user)
     
