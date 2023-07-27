@@ -1,94 +1,64 @@
-# # ws_7_2.py
-
+# # ws_8_1.py
 # # 아래 클래스를 수정하시오.
-# class Shape:
-#    def __init__(self, width, height):
-#       self.width = width  # 인스턴스 변수 정의/할당
-#       self.height = height
+class Animal:
+    num_of_animal = 0
 
-#    # 인스턴스 메서드 추가
-#    def calculate_area(self):
-#       return self.width * self.height
-     
-# shape1 = Shape(5, 3)  # Shape 클래스의 인스턴스 생성
-# area1 = shape1.calculate_area()  # 인스턴스 메서드 호출
-# print(area1)
+    def __init__(self):
+       Animal.num_of_animal += 1
+    
+
+# class Dog(Animal):
+#     pass
 
 
-# ws_7_3.py
-
-# 아래 클래스를 수정하시오.
-# class Shape:
-#    def __init__(self, width, height):
-#       self.width = width
-#       self.height = height
-
-#    def calculate_perimeter(self):
-#       return (self.width + self.height) * 2
-
-# shape1 = Shape(5, 3)
-# perimeter1 = shape1.calculate_perimeter()
-# print(perimeter1)
-
-# ws_7_4.py
-
-# 아래 클래스를 수정하시오.
-# class Shape:
-#    def __init__(self, width, height):
-#       self.width = width
-#       self.height = height
-      
-#    def print_info(self):
-#       print(f'Width: {self.width}')
-#       print(f'Height: {self.height}')
-#       print(f'Area: {self.width * self.height}')
-#       print(f'Perimeter: {(self.width + self.height) * 2}')           
-      
-# shape1 = Shape(5, 3)
-# shape1.print_info()
+# class Cat(Animal):
+#     pass
 
 
-# # 매직메서드
-# class Shape:
-#   def __init__(self, width, height):
-#     self.width = width
-#     self.height = height
+# class Pet(Dog, Cat):
+#    @classmethod
+#    def access_num_of_animal(cls):
+#        return f'동물의 수는 {cls.num_of_animal}마리 입니다.'
 
-#   def __gt__(self, other):  # 자신 말고 다른 객체 
-#     return self.width * self.height > other.width * other.height
-  
-#   def __eq__(self, other):
-#     return self.width * self.height == other.width * other.height
+# dog = Dog()
+# print(Pet.access_num_of_animal())
+# cat = Cat()
+# print(Pet.access_num_of_animal())
 
-# s1 = Shape(3,4)
-# s2 = Shape(5,6)
-# print(s2 > s1)
 
-# s3 = Shape(6,5)
-# print(s2 == s3)
+class Dog(Animal):
+    # 클래스 속성 sound
+    sound = "멍멍"
 
-# ws_7_5.py
 
-# 아래 클래스를 수정하시오.
-# class Shape:
-#    def __init__(self, width, height):
-#       self.width = width
-#       self.height = height
+class Cat(Animal):
+    # 클래스 속성 sound
+    sound = "야옹"
 
-#    def __str__(self):
-#       return f'Shape: width={self.width}, height={self.height}'
 
-# shape1 = Shape(5, 3)
-# print(shape1)
+class Pet(Dog, Cat):
 
-# hw_7_2.py
+    def __str__(self):
+       return f'애완동물은 {self.sound} 소리를 냅니다.'
+    
+    @classmethod
+    def __str__(cls):
+       return f'애완동물은 {cls.sound} 소리를 냅니다.'
 
-# 아래 클래스를 수정하시오.
-class StringRepeater:
-   def __init__(self, count, word):
-      self.count = count
-      self.word = word
+pet1 = Pet()
+print(pet1)
 
-repeater1 = StringRepeater()
-repeater1.repeat_string(3, "Hello")
+class Pet(Cat, Dog):
 
+    # 아래 인스턴스 메서드 생략해도 가능
+    def __str__(self):
+       return f'애완동물은 {self.sound} 소리를 냅니다.'
+    
+    # 클래스 속성(변수) 사용하기 위해 클래스 메서드 호출
+    # 오버라이딩은 부모클래스의 메서드를 자식 클래스에서 재정의 하여 사용하는 것
+    @classmethod
+    def __str__(cls): 
+       return f'애완동물은 {cls.sound} 소리를 냅니다.'
+
+pet1 = Pet()
+print(pet1)
