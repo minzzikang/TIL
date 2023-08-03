@@ -1,20 +1,29 @@
-# hw_8_2.py
+# hw_8_4.py
 
-# 아래 함수를 수정하시오.
-def check_number():
-    num = int(input('숫자를 입력하세요 : '))
+# 아래 클래스를 수정하시오.
+class UserInfo:
+    def __init__(self):
+        self.user_data = {}
 
-    try:
-        if num > 0:
-            print('양수입니다.')
+    def get_user_info(self):
+        try:
+            self.user_data["name"] = input("이름을 입력하세요 : ")
+            self.user_data["age"] = int(input("나이를 입력하세요 : "))
         
-        elif num < 0:
-            print('음수입니다.')
+        except ValueError:
+            print("나이는 숫자로 입력해야 합니다.")
 
-        elif num == 0:
-            print('0입니다.')
+        
+    def display_user_info(self):
+        if len(self.user_data) > 0:
+            print(f"사용자 정보 : ")
+            print(f"이름 : {self.user_data['name']}")
+            print(f"나이: {str(self.user_data['age'])}")
 
-    except ValueError:
-        print('잘못된 입력입니다.')
+        elif self.user_data["name"] == "" and self.user_data["age"] == "":
+            print('사용자 정보가 입력되지 않았습니다.')
 
-check_number()
+
+user = UserInfo()
+user.get_user_info()
+user.display_user_info()
