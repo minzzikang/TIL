@@ -6,10 +6,10 @@ for tc in range(1, T+1):
     # K: 부분집합 원소의 합
     N, K = map(int, input().split())
 
-    count = 0  # 원소 합과 개수가 일치하는 부분집합 개수
+    count = 0  # 원소 합과 개수가 일치하는(조건만족) 부분집합 개수
 
     # 집합 A의 모든 부분집합을 검사
-    for i in range(1 << len(A)): # A의 부분집합 개수 = 2**len(A)
+    for i in range(1 << len(A)): # i는 
         sum_set = 0  # 부분집합의 합
         count_set = 0  # 부분집합의 개수
         # 부분집합 중 i번째에는 n개의 원소 중 j번째의 원소를 포함하는지 
