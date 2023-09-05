@@ -1,0 +1,23 @@
+.board {
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+}
+
+.col {
+    width: 100px;
+    height: 100px;
+}
+
+.row {
+    display: flex;
+}
+
+.row:nth-child(odd) .col:nth-child(even),
+.row:nth-child(even) .col:nth-child(odd) {
+    background-color: black;
+}
+
+.king {
+    content: ;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 800px;
+        }
+
+        .img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 1rem;
+        }
+
+        .name-etc {
+            display: flex;
+            justify-content: space-between;
+            margin-inline-start: 3rem;
+            margin-inline-end: 2rem;
+            align-items: center;
+        }
+        .name {
+            text-align: center;
+        }
+        .description {
+            justify-content: right;
+            display: flex;
+            margin-right: 1rem;
+        }
+        hr {
+            width: 750px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="images/SSAFY 강의장 바탕화면_230531.jpg" alt="Profile Image" width="200px">
+            <h2>Company Name</h2>
+        </div>
+        <div class="name-etc">
+            <div class="name">
+                <h3>한글 이름</h3>
+                <h4>English Name</h4>
+            </div>
+            <div>
+                <p>Phone Number</p>
+                <p>Email</p>
+            </div>
+        </div>
+        <hr>
+        <div class="description">
+            <p>description</p>
+        </div>
+    </div>
+</body>
+
+</html>
