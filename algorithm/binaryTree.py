@@ -33,6 +33,5 @@ for i in range(E):
 
     par[c] = p  # 자식을 인덱스로 부모 저장
 
-rooty
 
 preorder(1)
