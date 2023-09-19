@@ -28,6 +28,7 @@ def backtracking(r, remain):  # remain: 앞으로 놔야 하는 남은 퀸 갯�
             # 우상
             # 인덱스 범위 내에 있으면서 퀸이 있는지
             if (r - j) >= 0 and (i + j) < N and board[r - j][i + j] == 1:
+
                 is_place = False
                 break
 

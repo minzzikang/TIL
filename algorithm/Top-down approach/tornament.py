@@ -3,8 +3,7 @@ rock = 2
 paper = 3
 
 def tournament(i, j):
-    # 종료조건 : 더 이상 두 부분으로 쪼갤 수 없을 때
-    # i~j 사이에 있는 사람 1명
+    # 종료조건 : 더 이상 두 부분으로 쪼갤 수 없을 때 => i~j 사이에 있는 사람 1명
     if i == j:
         return i
 
