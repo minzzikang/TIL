@@ -1,6 +1,11 @@
 def merge(l, r):
     global cnt
     result = []
+
+    # 왼쪽 리스트 마지막 원소가 오른쪽 리스트 마지막 원소보다 클 때
+    if l[-1] > r[-1]:
+        cnt += 1
+
     # i: l에서 원소 꺼낼 위치 / j: r에서 원소 꺼낼 위치
     i, j = 0, 0
 
@@ -36,13 +41,16 @@ def merge(l, r):
 
 def merge_sort(lst):
     # 종료 조건: 더 이상 분할 안 될 때까지
-    if N == 1:
+    if len(lst) == 1:
         return lst
 
     # 리스트 분할 및 정렬
-    mid = N // 2
-    l = merge_sort(lst[:mid])
-    r = merge_sort(lst[mid:])
+    mid = len(lst) // 2
+    l = lst[:mid]
+    r = lst[mid:]
+
+    l = merge_sort(l)
+    r = merge_sort(r)
 
     return merge(l, r)
 
