@@ -26,9 +26,6 @@ def union(x, y):
     p[find_set(y)] = find_set(x)
 
 
-for i in range(1, 7):
-    make_set(i)
-
 #==========================================================
 p1 = [0] * 7
 rank = [0] * 7  # 트리 깊이 저장할 리스트
@@ -41,7 +38,7 @@ def make_set1(x):
 
 # 2. 대표 찾는 연산
 def find_set1(x):
-    # 경로 압축
+    # 경로 압축!!
     if x != p[x]:
         p[x] = find_set1(p[x])
 
@@ -70,3 +67,22 @@ def union1(x, y):
         # 두 집합 깊이가 같은 경우 깊이 + 1
         if rank[x] == rank[y]:
             rank[y] += 1  # y가 부모이므로 y에서만 증가
+
+
+
+for i in range(1, 7):
+    make_set1(i)
+
+union1(1,3)
+union1(2,3)
+union1(5,6)
+union1(1,5)
+print(p)
+'''
+[0, 3, 3, 6, 4, 6, 6]
+'''
+print(find_set1(1))
+print(p)  # 경로 최적화 이루어짐
+'''
+[0, 6, 3, 6, 4, 6, 6]
+'''
