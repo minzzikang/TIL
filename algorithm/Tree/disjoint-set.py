@@ -38,7 +38,7 @@ def make_set1(x):
 
 # 2. 대표 찾는 연산
 def find_set1(x):
-    # 경로 압축!!
+    # 경로 압축
     if x != p[x]:
         p[x] = find_set1(p[x])
 
