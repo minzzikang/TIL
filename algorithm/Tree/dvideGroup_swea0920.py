@@ -1,6 +1,3 @@
-def make_set(x):
-    p[x] = x
-
 def find_set(x):
     # 경로 압축
     if x != p[x]:
@@ -27,9 +24,6 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     paper = list(map(int, input().split()))
     p = [_ for _ in range(N+1)]
-
-    for i in range(1, N+1):
-        make_set(i)
 
     for j in range(M):
         union(paper[j*2], paper[j*2+1])
