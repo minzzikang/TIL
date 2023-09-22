@@ -8,7 +8,8 @@ def bfs(s):
     # 시작점 연락 체크
     visited[s] = 1
 
-    max_v = 0
+    max_v = 0  # 마지막 연락(visited에서 가장 큰 숫자)
+    last_num = 0  # 마지막에 연락 받은 사람의 번호
 
     while Q:  # 큐가 빌 때까지 반복해서 탐색
         now = Q.pop(0)
@@ -20,15 +21,14 @@ def bfs(s):
                 continue
 
             Q.append(next)
+            # 기존 방문보다 한 번 더 갔다고 표시
             visited[next] = visited[now] + 1
 
-            # visited 에서 가장 높은 값 찾기 (마지막 연락)
-            max_v = max(max_v, visited[next])
-
-    last_num = 0  # 마지막에 연락받은 사람의 번호
-    for i in range(101):  # 여러 명일 경우 큰 번호가 정답이므로 반복문
-        if visited[i] == max_v:
-            last_num = i
+            # 전화를 더 했거나 전화 받은 순서는 같은 데 번호가 더 크면
+            # max값 초기화
+            if max_v < visited[next] or (max_v == visited[next] and last_num < next):
+                max_v = visited[next]
+                last_num = next
 
     return last_num
 
