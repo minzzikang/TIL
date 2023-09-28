@@ -16,7 +16,7 @@ x = 10
 # n-1번째 원소까지하고, 다 완료한 경우 뒤로 돌아와서
 # 내가 이전에 선택했다면 선택 안하고 다음 진행 ... 반복
 
-def subset(i, n, subsum):
+def subset(i, subsum):
     # 0. 최적화(다른 조건)
     if subsum > x:
         return   # 더 이상 진행x (가지치기)
@@ -40,11 +40,11 @@ def subset(i, n, subsum):
     # 2. 재귀호출
     # i번째 원소 선택하고 다음 i+1번째 원소 선택하러 가거나
     selected[i] = 1
-    subset(i+1, n, subsum + numbers[i])  # 선택했으니 i번째 원소값을 더해줘야함
+    subset(i+1, subsum + numbers[i])  # 선택했으니 i번째 원소값을 더해줘야함
 
     # i번째 원소 선택하지 않고 다음 i+1번째 원소를 선택하러 가거나
     selected[i] = 0
-    subset(i+1, n, subsum)
+    subset(i+1, subsum)
 
 
-subset(0, n, 0)
+subset(0, 0)

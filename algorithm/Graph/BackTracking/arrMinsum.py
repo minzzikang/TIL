@@ -1,16 +1,13 @@
-import sys
-sys.stdin = open('sample_input(1).txt', 'r')
-
 # 재귀 함수
 # 현재 i번째 행에서 j번째 열을 골라서 합을 만들기
 def backtracking(i, now_sum):
     # 최소값 수정해야하니까, global 선언
     global min_v
+
     # 최적화 조건
     # 현재 내가 알고있는 합이 이전에 구했던 최소 합보다 크면
     # 더 진행할 필요가 있을까?
-    # i번째 행까지 구했는데
-    # 전에 n번째 행까지 합한 합보다 더 커버리면 이후에 더해봤자
+    # i번째 행까지 구했는데 전에 n번째 행까지 합한 합보다 더 커버리면 이후에 더해봤자
     # 커지면 커졌지 작아지진 않을것이다... 가망이 없을것이다. => return
     if now_sum > min_v:
         return
